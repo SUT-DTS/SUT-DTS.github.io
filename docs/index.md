@@ -8,7 +8,7 @@ hero:
   tagline: Love From SUT-DTS.
 
 image:
-    src: /pics/logo.jpg
+    src: /pics/logo.png
     alt: logo
 
 features:
