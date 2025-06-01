@@ -1,0 +1,95 @@
+# Prerequisites
+*.d
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
+
+# Temp files
+*.tmp
+
+# Obsidian
+.obsidian/
+.trash/
+
+# Log
+*.log
+
+# IDE/Editor
+.vscode/
+.idea/
+
+# node
+node_modules
+build
+temp
+cache
+deps/*
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+.yarn-integrity
+
+# vitepress
+/coverage
+/src/client/shared.ts
+/src/node/shared.ts
+*.tgz
+.DS_Store
+.temp
+.vite_opt_cache
+dist
+examples-temp
+*.timestamp-*.mjs
+
+# linter&formatter
+.cpp-linter_cache
