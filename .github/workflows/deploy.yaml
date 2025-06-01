@@ -23,17 +23,17 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Node
+      - name: Enable Corepack & Prepare Yarn 4.9.1
+        run: |
+          corepack enable
+          corepack prepare yarn@4.9.1 --activate
+          yarn --version
+
+      - name: Setup Node.js (do NOT use Yarn cache)
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: yarn
-
-      - name: Enable Corepack
-        run: corepack enable
-
-      - name: Prepare Yarn 4.9.1
-        run: corepack prepare yarn@4.9.1 --activate
+          cache: 'npm'
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
