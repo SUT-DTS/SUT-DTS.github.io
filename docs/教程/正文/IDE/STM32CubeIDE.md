@@ -1,7 +1,9 @@
 # STM32CubeIDE
->STM32CubeIDE是一体式多操作系统开发工具，是STM32Cube软件生态系统的一部分。STM32CubeIDE集成了STM32CubeMX的STM32配置与项目创建功能，以便提供一体化工具体验，并节省安装与开发时间。(≧∇≦)ﾉ
+> **Why STM32CubeIDE?**
+>
+> STM32CubeIDE是一体式多操作系统开发工具，是STM32Cube软件生态系统的一部分。STM32CubeIDE集成了STM32CubeMX的STM32配置与项目创建功能，以便提供一体化工具体验，并节省安装与开发时间。(≧∇≦)ﾉ
 
-## A-1 软件安装
+## 软件安装
 
 1. 点击[这里](https://www.st.com.cn/zh/development-tools/stm32cubeide.html)进入官网,并点击【获取软件】；![00.png](../../../images/IDE/STM32CubeIDE/A1/00.png)
 2. 点击对应系统（Linux/Windows）的【获取最新版本】，并【接受】许可协议；![01.png](../../../images/IDE/STM32CubeIDE/A1/01.png)
@@ -18,7 +20,7 @@
 6. 一路【Accept】和【Next】，安装选项保持默认即可，安装路径**建议不选C盘**；![04.png](../../../images/IDE/STM32CubeIDE/A1/04.png)
 7. 【Finish】！安装完成啦~![05.png](../../../images/IDE/STM32CubeIDE/A1/05.png)
 
-## A-2“包”安装-创建你的第一个工程
+## “包”安装-创建你的第一个工程
 > 包，也就是Pack，是用于对某个系列芯片的代码生成、编译的重要文件，接下来通过创建第一个工程来顺便安装Pack。(o゜▽゜)o☆
 
 1. 双击桌面图标以启动软件；![00.png](../../../images/IDE/STM32CubeIDE/A2/00.png)
@@ -57,7 +59,7 @@
 12. 安装完回到CubeMX页面，按下**Ctrl+S**即可保存并生成代码，若遇到下面两个提示，此时请按照下图说明，勾选复选框并Yes；![014.png](../../../images/IDE/STM32CubeIDE/A2/014.png)![015.png](../../../images/IDE/STM32CubeIDE/A2/015.png)
 13. 至此我们成功创建了第一个工程并生成了基础代码；![016.png](../../../images/IDE/STM32CubeIDE/A2/016.png)
 
-## A-3 软件汉化
+## 软件汉化
 > 虽然道理我都懂，但英文界面看着总是不太习惯呢...(っ °Д °;)っ
 
 1. 根据下图依次点击，进入“软件安装”界面；![00.png](../../../images/IDE/STM32CubeIDE/A3/00.png)
@@ -79,7 +81,7 @@ https://download.eclipse.org/technology/babel/update-site/latest/
 7. 重启后，IDE汉化完成~![09.png](../../../images/IDE/STM32CubeIDE/A3/09.png)
 > ~~这下舒服多了\(0^◇^0)/~~
 
-## A-4 项目基本配置
+## 项目基本配置
 > 这是开启任何项目前的“起手式”哦，请务必牢记～**以后的所有配置教程及代码教程都将默认你已无误完成本小节的基本配置！**╰(\*°▽°\*)╯
 
 1. 双击.ioc文件进入CubeMX界面，按照下图所示方法，在【System Core】中设置高速外部时钟源为晶振，设置Debug为Serial Wire；
@@ -96,7 +98,7 @@ https://download.eclipse.org/technology/babel/update-site/latest/
 
 ~~现在请开始你的表演~~
 
-## A-5 使用DAP-Link下载、调试程序到单片机
+## 使用DAP-Link下载、调试程序到单片机
 > 是没见过的下载器呢...ヾ(•ω•`)o
 
 1. 先点击页面左上角的小锤子对当前代码进行编译，无报错即可进行下一步；![00.png](../../../images/IDE/STM32CubeIDE/A5/00.png)
@@ -110,7 +112,7 @@ CubeIDE中还存在另一种按钮风格，此时对应的按钮如图所示:![0
 :::
 4. 双击工程中的.cfg文件，更改烧录配置；![04.png](../../../images/IDE/STM32CubeIDE/A5/04.png)
 ::: details 如果你的电脑打开了如VSCode之类的其他编辑器...
-#### 设置文件的默认打开方式
+##### 设置文件的默认打开方式
 - 在.cfg文件上右键→打开方式→其他...；![06.png](../../../images/IDE/STM32CubeIDE/A5/06.png)
 - 选择【内部编辑器】→【通用编辑器】后，勾选【所有“*.cfg“文件使用它】，【确定】；![07.png](../../../images/IDE/STM32CubeIDE/A5/07.png)
 :::

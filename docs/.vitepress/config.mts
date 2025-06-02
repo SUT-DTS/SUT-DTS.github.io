@@ -39,6 +39,10 @@ export default withPwa(
                   text: "STM32CubeIDE",
                   link: "/教程/正文/IDE/STM32CubeIDE.md",
                 },
+                {
+                  text: "VSCode+STM32CubeMX",
+                  link: "/教程/正文/IDE/VSCode.md",
+                },
               ],
             },
           ],
