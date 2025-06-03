@@ -1,3 +1,5 @@
+// noinspection TypeScriptValidateTypes
+
 import { defineConfig } from "vitepress";
 import { withMermaid } from "vitepress-plugin-mermaid";
 import { withPwa } from "@vite-pwa/vitepress";
