@@ -5,13 +5,20 @@ layout: home
 hero:
   name: "STM32GuideBook"
   text: "STM32冒险手册"
-  tagline: STM32GuideBook
+  tagline: Ad astra abyssosque!
+  image:
+    src: /images/main.png
+    alt: MyWafu
   actions:
     - theme: brand
-      text: 出发吧！
+      text: TAP HERE TO START
       link: /教程/正文/在开始之前
 
 features:
-  - title: 欢迎喵！
-    details: 这里是沈阳工业大学DTS战队的控制组嵌入式教学文档，目前有嵌入式IDE的相关配置教程！
+  - title: 新人友好
+    details: 本教程面向对嵌入式开发零基础的小白，小刻也能轻松上手！
+  - title: 与时俱进
+    details: 尽可能使用最新的开发环境与技术栈。
+  - title: 路线多样
+    details: 提供STM32CubeIDE、VSCode与CLion等多种开发环境供你选择。
 ---

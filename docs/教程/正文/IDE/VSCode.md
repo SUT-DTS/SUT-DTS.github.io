@@ -94,14 +94,14 @@
 :::tip
 STM32CubeMX的芯片选型，基础配置与[STM32CubeIDE](/教程/正文/IDE/STM32CubeIDE#项目基本配置)完全一致哦！
 :::
-2. 将战队Github仓库DTSCodes下的文件夹VSCode_dev_env中的文件复制进你的工程内；![14.png](../../../images/IDE/VSCode/14.png)
+2. 将本Github仓库下的文件夹[`VSCode_dev_env`(点击下载)](https://github.com/SUT-DTS/SUT-DTS.github.io/releases/download/Ver.CH1.10-B/VSCode_dev_env.zip)中的所有文件复制进你的工程内；![14.png](../../../images/IDE/VSCode/14.png)
 3. 复制完后，在工程文件夹空白区域内**右键**，选择【通过Code打开】；![15.png](../../../images/IDE/VSCode/15.png)
 4. 首次打开VSCode时，上方会弹出配置预设的选择，请选择【Debug】；![16.png](../../../images/IDE/VSCode/16.png)
 ::: tip
 如果错过了第4步，请使用`Ctrl+Shift+P`快捷键，输入`cmake: select configure preset`，即可回到第4步。
 :::
 5. 接下来，你可以...
-   - 可以使用快捷键进行老三样操作：`F5`调试，`F7`编译，`Ctrl+Shift+B`烧录；
+   - 使用快捷键进行老三样操作：`F5`调试，`F7`编译，`Ctrl+Shift+B`烧录；
    - 在`openocd.cfg`中可以配置芯片型号和烧录器种类；
    - 自己创建的源文件和头文件需要在`CMakeLists.txt`中添加；![17.png](../../../images/IDE/VSCode/17.png)
 6. <Badge type="warning" text="可选步骤" />将F8设置为「烧录」的快捷键：
