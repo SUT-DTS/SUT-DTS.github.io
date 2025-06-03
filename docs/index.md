@@ -6,9 +6,6 @@ hero:
   name: "STM32GuideBook"
   text: "STM32冒险手册"
   tagline: Ad astra abyssosque!
-  image:
-    src: /images/main.png
-    alt: MyWafu
   actions:
     - theme: brand
       text: TAP HERE TO START
