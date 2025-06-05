@@ -45,6 +45,10 @@ export default withPwa(
                   text: "VSCode+STM32CubeMX",
                   link: "/教程/正文/IDE/VSCode.md",
                 },
+                {
+                  text: "CLion+STM32CubeMX",
+                  link: "/教程/正文/IDE/CLion.md",
+                },
               ],
             },
           ],
