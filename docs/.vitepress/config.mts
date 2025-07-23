@@ -51,6 +51,16 @@ export default withPwa(
                 },
               ],
             },
+            {
+              text: "调试器",
+              collapsed: false,
+              items: [
+                {
+                  text: "Ozone",
+                  link: "/教程/正文/Debugger/Ozone.md",
+                },
+              ],
+            },
           ],
         },
         outline: {

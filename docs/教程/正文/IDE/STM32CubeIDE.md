@@ -117,7 +117,7 @@ CubeIDE中还存在另一种按钮风格，此时对应的按钮如图所示:![0
 - 选择【内部编辑器】→【通用编辑器】后，勾选【所有“*.cfg“文件使用它】，【确定】；![07.png](../../../images/IDE/STM32CubeIDE/A5/07.png)
 :::
 5. 将.cfg文件按照如下方式修改：
-   - 修改第6行：`source \[find interface/stlink-dap.cfg]` 为source `\[find interface/cmsis-dap.cfg]`；
+   - 修改第6行：`source \[find interface/stlink-dap.cfg]` 为`source \[find interface/cmsis-dap.cfg]`；
    - 修改第11行：`transport select "dapdirect_swd"` 为 `transport select "swd"`；
    - 修改第28行：`reset_config srst_only srst_nogate connect_assert_srst` 为 `reset_config none`；
 
