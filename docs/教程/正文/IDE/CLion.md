@@ -43,14 +43,14 @@
 
    ::: details 如何做？
 
-   1. 点击【管理工具链】后，来到工具链管理页面，首先新建一个配置，选择【系统】；![16.png](../../../images/IDE/CLion/16.   png)
-   2. 按照下图，选择你刚刚安装的STM32CubeCLT中的文件完成工具链的配置，完成后点击【应用】；![17.png](../../../images/   IDE/CLion/17.png)
+   1. 点击【管理工具链】后，来到工具链管理页面，首先新建一个配置，选择【系统】；![16.png](../../../images/IDE/CLion/16.png)
+   2. 按照下图，选择你刚刚安装的STM32CubeCLT中的文件完成工具链的配置，完成后点击【应用】；![17.png](../../../images/IDE/CLion/17.png)
       ::: tip
       **如果你正在使用的CubeMX版本为6.15.0或更高，请将【C编译器】与【C++编译器】栏位留空！**
    3. 随后转到**构建、执行、部署→嵌入式开发**选项卡下配置嵌入式工具链，如图，选择OpenOCD、STM32CubeMX与STM32CubeCLT的安   装路径，并确保右侧的【测试】全部通过；![18.png](../../../images/IDE/CLion/18.png)
    :::
    ::: warning
-   正常情况下，【生成器】选项中将会默认选择Ninja（使用默认值），如果不是这样，请手动选择【生成器】为`Ninja`![38.png]   (../../../images/IDE/CLion/38.png)
+   正常情况下，【生成器】选项中将会默认选择Ninja（使用默认值），如果不是这样，请手动选择【生成器】为`Ninja`![38.png](../../../images/IDE/CLion/38.png)
    :::
 6. <Badge type="warning" text="可选步骤" />转到**编辑器→检查**选项卡下，导入配置[CodeCheck.xml](https://github.com/SUT-DTS/SUT-DTS.github.io/blob/db7044fd90bd89034067e8a7a245372294fb69b9/CLion_dev_env/CodeCheck.xml)（可在本Github仓库中找到，或直接[点击下载](https://github.com/SUT-DTS/SUT-DTS.github.io/releases/download/Ver.CH1.10-B/CLion_dev_env.zip)）；![19.png](../../../images/IDE/CLion/19.png)
 7. <Badge type="warning" text="可选步骤" />转到**编辑器→代码样式→C\C++** 选项卡下，导入配置[CodeFormat.xml](https://github.com/SUT-DTS/SUT-DTS.github.io/blob/db7044fd90bd89034067e8a7a245372294fb69b9/CLion_dev_env/CodeFormat.xml)（同样可在Github仓库中找到，或直接[点击下载](https://github.com/SUT-DTS/SUT-DTS.github.io/releases/download/Ver.CH1.10-B/CLion_dev_env.zip)）；![20.png](../../../images/IDE/CLion/20.png)

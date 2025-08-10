@@ -1,16 +1,16 @@
-# 关于 <Badge type="tip" text="Ver.CH1.20-C" />
+# 关于 <Badge type="tip" text="Ver.CH1.20-D" />
 
 ## STM32GuideBook
 
 原名：STM32指导书
 
-### 主要作者
+### 作者
 
 中断BREAK：[@NVICBreak](https://github.com/NVICBreak)
 
 ### 关注我们
 
-**关注沈阳工业大学DTS战队谢谢喵！**
+**关注沈阳工业大学MEIC战队谢谢喵！**
 
 Github：[@SUT-DTS](https://github.com/SUT-DTS)
 
