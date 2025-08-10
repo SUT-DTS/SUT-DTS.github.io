@@ -1,6 +1,6 @@
 # 关于 <Badge type="tip" text="Ver.CH1.20-C" />
 
-### STM32GuideBook
+## STM32GuideBook
 
 原名：STM32指导书
 
@@ -10,7 +10,7 @@
 
 ### 关注我们
 
-##### **关注沈阳工业大学DTS战队谢谢喵！**
+**关注沈阳工业大学DTS战队谢谢喵！**
 
 Github：[@SUT-DTS](https://github.com/SUT-DTS)
 

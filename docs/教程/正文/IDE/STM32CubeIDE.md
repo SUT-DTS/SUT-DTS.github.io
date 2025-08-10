@@ -1,4 +1,5 @@
 # STM32CubeIDE
+>
 > **Why STM32CubeIDE?**
 >
 > STM32CubeIDE是一体式多操作系统开发工具，是STM32Cube软件生态系统的一部分。STM32CubeIDE集成了STM32CubeMX的STM32配置与项目创建功能，以便提供一体化工具体验，并节省安装与开发时间。(≧∇≦)ﾉ
@@ -21,6 +22,7 @@
 7. 【Finish】！安装完成啦~![05.png](../../../images/IDE/STM32CubeIDE/A1/05.png)
 
 ## “包”安装-创建你的第一个工程
+>
 > 包，也就是Pack，是用于对某个系列芯片的代码生成、编译的重要文件，接下来通过创建第一个工程来顺便安装Pack。(o゜▽゜)o☆
 
 1. 双击桌面图标以启动软件；![00.png](../../../images/IDE/STM32CubeIDE/A2/00.png)
@@ -60,13 +62,16 @@
 13. 至此我们成功创建了第一个工程并生成了基础代码；![016.png](../../../images/IDE/STM32CubeIDE/A2/016.png)
 
 ## 软件汉化
+>
 > 虽然道理我都懂，但英文界面看着总是不太习惯呢...(っ °Д °;)っ
 
 1. 根据下图依次点击，进入“软件安装”界面；![00.png](../../../images/IDE/STM32CubeIDE/A3/00.png)
 2. 在下图所示输入框中输入以下网址并回车：
-~~~
+
+~~~txt
 https://download.eclipse.org/technology/babel/update-site/latest/
 ~~~
+
 ![01.png](../../../images/IDE/STM32CubeIDE/A3/01.png)
 ::: warning
 **若从此处开始直至本小节结束的任何一个步骤中等待时间过长（超过15分钟）或直接报错，则考虑：更换下载时段/更换网络连接/使用魔法**
@@ -82,6 +87,7 @@ https://download.eclipse.org/technology/babel/update-site/latest/
 > ~~这下舒服多了\(0^◇^0)/~~
 
 ## 项目基本配置
+>
 > 这是开启任何项目前的“起手式”哦，请务必牢记～**以后的所有配置教程及代码教程都将默认你已无误完成本小节的基本配置！**╰(\*°▽°\*)╯
 
 1. 双击.ioc文件进入CubeMX界面，按照下图所示方法，在【System Core】中设置高速外部时钟源为晶振，设置Debug为Serial Wire；
@@ -99,6 +105,7 @@ https://download.eclipse.org/technology/babel/update-site/latest/
 ~~现在请开始你的表演~~
 
 ## 使用DAP-Link下载、调试程序到单片机
+>
 > 是没见过的下载器呢...ヾ(•ω•`)o
 
 1. 先点击页面左上角的小锤子对当前代码进行编译，无报错即可进行下一步；![00.png](../../../images/IDE/STM32CubeIDE/A5/00.png)
@@ -111,18 +118,21 @@ CubeIDE中还存在另一种按钮风格，此时对应的按钮如图所示:![0
 这是计划的一部分，其目的主要是让CubeIDE生成烧录配置。
 :::
 4. 双击工程中的.cfg文件，更改烧录配置；![04.png](../../../images/IDE/STM32CubeIDE/A5/04.png)
-::: details 如果你的电脑打开了如VSCode之类的其他编辑器...
-##### 设置文件的默认打开方式
-- 在.cfg文件上右键→打开方式→其他...；![06.png](../../../images/IDE/STM32CubeIDE/A5/06.png)
-- 选择【内部编辑器】→【通用编辑器】后，勾选【所有“*.cfg“文件使用它】，【确定】；![07.png](../../../images/IDE/STM32CubeIDE/A5/07.png)
-:::
+   ::: details 如果你的电脑打开了如VSCode之类的其他编辑器...
+
+   **设置文件的默认打开方式**
+
+   - 在.cfg文件上右键→打开方式→其他...；![06.png](../../../images/IDE/STM32CubeIDE/A5/06.png)
+   - 选择【内部编辑器】→【通用编辑器】后，勾选【所有“*.cfg“文件使用它】，【确定】；![07.png](../../../images/IDE/STM32CubeIDE/A5/07.png)
+   :::
+
 5. 将.cfg文件按照如下方式修改：
    - 修改第6行：`source \[find interface/stlink-dap.cfg]` 为`source \[find interface/cmsis-dap.cfg]`；
    - 修改第11行：`transport select "dapdirect_swd"` 为 `transport select "swd"`；
    - 修改第28行：`reset_config srst_only srst_nogate connect_assert_srst` 为 `reset_config none`；
 
    修改后的文件看起来像这样：
-![05.png](../../../images/IDE/STM32CubeIDE/A5/05.png)
+   ![05.png](../../../images/IDE/STM32CubeIDE/A5/05.png)
 6. 此时再次下载，就可以成功下载代码到开发板啦~
 ::: info
 若此步还是未成功，在确认上述没有任何重要步骤跳过后，再找学长装驱动。

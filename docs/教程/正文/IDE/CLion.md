@@ -1,14 +1,17 @@
 # CLion+STM32CubeMX
+>
 > **Why CLion?**
 >
 > 使用STM32CubeMX + CLion进行日常开发，相比于使用CubeIDE，你可以得到：
+>
 > 1. 更加美观可高度自定义的图形化界面；
 > 2. 更加完善的社区和插件支持，包括git；
 > 3. 软件使用过程中几乎不会出现任何恶性BUG；
 > 4. 对FreeRTOS更加高级的调试支持；
 > 5. 更强大的AI自动补全代码功能，以及可自定义的代码格式化；
-> 
+>
 > 但与此同时...你将会：
+>
 > 1. 调试过程中无法使用Live Expressions（现场表达式）和Live Watch，这意味着你无法在IDE内部的调试界面动态观测变量值；
 > 2. 占用更多的CPU和内存。
 
@@ -34,19 +37,21 @@
 3. 在STM32CubeMX中，像往常一样完成项目配置，最后在Project Manager中，检查以下项目，完成后即可点击右上角【GENERATE CODE】生成代码；![05.png](../../../images/IDE/CLion/05.png)
 4. 将刚才复制的路径粘贴到CLion新建工程窗口的【位置】一栏中，点击【继续】完成工程创建；![06.png](../../../images/IDE/CLion/06.png)
 5. 将会自动弹出【打开项目向导】窗口，首先推荐勾选CMake自动重载以避免每次手动重载，将预设中的【工具链】修改为STM32预设；![07.png](../../../images/IDE/CLion/07.png)
-::: tip
-如果没有的话，就点击【管理工具链】创建一个吧！
-:::
-::: details 如何做？
-1. 点击【管理工具链】后，来到工具链管理页面，首先新建一个配置，选择【系统】；![16.png](../../../images/IDE/CLion/16.png)
-2. 按照下图，选择你刚刚安装的STM32CubeCLT中的文件完成工具链的配置，完成后点击【应用】；![17.png](../../../images/IDE/CLion/17.png)
    ::: tip
-   **如果你正在使用的CubeMX版本为6.15.0或更高，请将【C编译器】与【C++编译器】栏位留空！**
-3. 随后转到**构建、执行、部署→嵌入式开发**选项卡下配置嵌入式工具链，如图，选择OpenOCD、STM32CubeMX与STM32CubeCLT的安装路径，并确保右侧的【测试】全部通过；![18.png](../../../images/IDE/CLion/18.png)
-:::
-::: warning
-正常情况下，【生成器】选项中将会默认选择Ninja（使用默认值），如果不是这样，请手动选择【生成器】为`Ninja`![38.png](../../../images/IDE/CLion/38.png)
-:::
+   如果没有的话，就点击【管理工具链】创建一个吧！
+   :::
+
+   ::: details 如何做？
+
+   1. 点击【管理工具链】后，来到工具链管理页面，首先新建一个配置，选择【系统】；![16.png](../../../images/IDE/CLion/16.   png)
+   2. 按照下图，选择你刚刚安装的STM32CubeCLT中的文件完成工具链的配置，完成后点击【应用】；![17.png](../../../images/   IDE/CLion/17.png)
+      ::: tip
+      **如果你正在使用的CubeMX版本为6.15.0或更高，请将【C编译器】与【C++编译器】栏位留空！**
+   3. 随后转到**构建、执行、部署→嵌入式开发**选项卡下配置嵌入式工具链，如图，选择OpenOCD、STM32CubeMX与STM32CubeCLT的安   装路径，并确保右侧的【测试】全部通过；![18.png](../../../images/IDE/CLion/18.png)
+   :::
+   ::: warning
+   正常情况下，【生成器】选项中将会默认选择Ninja（使用默认值），如果不是这样，请手动选择【生成器】为`Ninja`![38.png]   (../../../images/IDE/CLion/38.png)
+   :::
 6. <Badge type="warning" text="可选步骤" />转到**编辑器→检查**选项卡下，导入配置[CodeCheck.xml](https://github.com/SUT-DTS/SUT-DTS.github.io/blob/db7044fd90bd89034067e8a7a245372294fb69b9/CLion_dev_env/CodeCheck.xml)（可在本Github仓库中找到，或直接[点击下载](https://github.com/SUT-DTS/SUT-DTS.github.io/releases/download/Ver.CH1.10-B/CLion_dev_env.zip)）；![19.png](../../../images/IDE/CLion/19.png)
 7. <Badge type="warning" text="可选步骤" />转到**编辑器→代码样式→C\C++** 选项卡下，导入配置[CodeFormat.xml](https://github.com/SUT-DTS/SUT-DTS.github.io/blob/db7044fd90bd89034067e8a7a245372294fb69b9/CLion_dev_env/CodeFormat.xml)（同样可在Github仓库中找到，或直接[点击下载](https://github.com/SUT-DTS/SUT-DTS.github.io/releases/download/Ver.CH1.10-B/CLion_dev_env.zip)）；![20.png](../../../images/IDE/CLion/20.png)
 8. CLion内置GDB服务，并支持直接使用**JLink**或**STLink**进行烧录，不过我们需要来到【设置】中，根据下图所示的位置，手动将其开启；![08.png](../../../images/IDE/CLion/08.png)
@@ -60,7 +65,7 @@
 :::
 11. 完成后，调试服务器应该会自动切换为你刚刚添加的STLink，这之后你就可以使用右侧的老三样按钮，狠狠滴开始嵌入式开发了；![14.png](../../../images/IDE/CLion/14.png)
 
-## 如果要使用DAP-Link...
+## 如果要使用DAP-Link
 
 1. ...比较可惜的是，CLion官方似乎还并没有内置DAP-Link下载器的配置，因此我们需要手动配置DAP-Link。首先来到本Github仓库中，将[daplink.cfg](https://github.com/SUT-DTS/SUT-DTS.github.io/blob/db7044fd90bd89034067e8a7a245372294fb69b9/CLion_dev_env/daplink.cfg)配置文件复制进工程根目录；![21.png](../../../images/IDE/CLion/21.png)
 ::: tip
@@ -81,6 +86,7 @@
 2. 双击打开`CMakeLists.txt`，可见STM32CubeMX为我们生成的`CMakeLists.txt`文件非常整洁，注释完善。如果可以的话推荐自己阅读一遍注释，这样你基本就能够搞清楚其中每个段落的具体用法了；![26.png](../../../images/IDE/CLion/26.png)
 3. 头文件与源文件加入构建的方法如下图所示，路径全部使用相对路径即可；![27.png](../../../images/IDE/CLion/27.png)
 ::: tip
+
 - 对于源文件路径，有办法做到批量一键复制！首先将你想要添加的源文件都选中，然后右键打开菜单，并点击【复制路径/引用】；![28.png](../../../images/IDE/CLion/28.png)
 - 在弹出窗口中选择【来自内容根的路径】，即可批量复制相对路径，随后直接在CMakeLists.txt中直接粘贴即可！![29.png](../../../images/IDE/CLion/29.png)
 :::
@@ -96,9 +102,11 @@
 2. 删除这两个文件夹以避免干扰；![32.png](../../../images/IDE/CLion/32.png)
 3. 进入工程【首选项】，找到`C/C++ Build → Builder Settings`，取消勾选`Use default build command`；![33.png](../../../images/IDE/CLion/33.png)
 4. 将下方的【Build command】修改为如下内容，完成后保存关闭：
-```
-echo "No build required - using CLion"
-```
+
+   ```bash
+   echo "No build required - using CLion"
+   ```
+
 5. 在 STM32CubeIDE 顶部菜单栏，点击**Run > Debug Configurations...**，在左侧展开`STM32 C/C++ Application`，右键点击 → `New Configuration`；![34.png](../../../images/IDE/CLion/34.png)
 6. 在【Main】标签页下，【Project】选择`DebugWrapper`，C/C++ Applications需要粘贴你在CLion中编译出来的`.elf`文件的绝对路径；![35.png](../../../images/IDE/CLion/35.png)
 ::: warning

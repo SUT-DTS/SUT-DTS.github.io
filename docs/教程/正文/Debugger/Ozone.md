@@ -1,9 +1,10 @@
 # Ozone - The J-Link Debugger
+>
 > Ozone 是 SEGGER 提供的一款功能全面的图形化调试器，支持对嵌入式应用的 C/C++/Rust 代码进行调试。它可与 J-Link 和 J-Trace 调试探针配合使用，支持程序追踪、性能分析和代码覆盖率分析，是一款强大的性能调试工具，适用于各种开发需求。
-
 > Ozone仅支持J-Link，但某些特定版本也支持DAP-LINK，比如32位的V3.24
 
 ## 软件安装
+
 1. [点击此处前往蓝奏云（访问密码：0721）](https://wwab.lanzouw.com/b00q0pih7a)下载其中所有文件；
    ::: warning
    经测试，仅V3.24版本支持DAP-Link调试
@@ -16,6 +17,7 @@
    :::
 
 ## 配置调试项目
+
 1. 安装完两个软件后，即可启动Ozone，首次启动时将会显示一个New project wizard，选择M4内核，为了能够查看外设寄存器的值还需要svd文件，svd文件可以在[此仓库](https://github.com/cmsis-svd/cmsis-svd)中获取；![02.png](../../../images/Debugger/Ozone/02.png)
    ::: details 如果New project wizard没有打开...
    在工具栏的File-> New -> New project wizard。
@@ -24,12 +26,15 @@
 3. 选择构建之后生成的`.elf`文件（在项目文件夹下的`build`中），或是直接粘贴绝对路径，这是调试器专用的文件格式，对其内容感兴趣可以自行搜索细节。此外Ozone还支持`.bin` `.hex` `.axf`（最后一个是amr-cc，也就是keil的工具链会生成的）等格式；![04.png](../../../images/Debugger/Ozone/04.png)![05.png](../../../images/Debugger/Ozone/05.png)
 
 ## 启用FreeRTOS
+
 如果你的代码使用了实时系统，在载入项目的时候Ozone会进行对应的提示。选择载入支持实时系统的插件即可，我们的项目是F4的板子，内核是Cortex-M4（CM4），因此选用`FreeRTOSPlugin_CM4.js`（输入的时候js后缀不用输）。 Ozone默认输入的命令似乎有误，需要手动修改（这好像和Ozone的版本有关，请留意）；![06.png](../../../images/Debugger/Ozone/06.png)
    ::: details 如果没有出现提示...
    请在console中输入下面的命令然后回车即可：
-   ```
+
+   ```js
    Project.SetOSPlugin(“plugin_name”)
    # plugin_name是启用的实时系统支持插件名
    # 我们要使用的命令是Project.SetOSPlugin ("FreeRTOSPlugin_CM4")
    ```
+
    :::
