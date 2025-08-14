@@ -7,7 +7,7 @@
 
 1. [点击此处前往蓝奏云（访问密码：0721）](https://wwab.lanzouw.com/b00q0pih7a)下载其中所有文件；
    ::: warning
-   经测试，仅V3.24版本支持DAP-Link调试
+   经测试，仅32位的V3.24版本支持DAP-Link调试
    :::
 2. 下载完成后，双击`Ozone_Windows_V324_x86.exe`安装Ozone，在安装时请选择Install a new instance（安装一个新的实例），后续一路确认即可；![00.png](../../../images/Debugger/Ozone/00.png)
 3. 接着双击`JLink_Windows_V722b.exe`安装JLink，在这一步注意不要勾选Update dll in other application，否则JLink会把Ozone里面老的驱动和启动项替代掉。Choose destination和Ozone一样，选择Install a new instance。如果安装了老的相同版本的JLink，请先卸载（版本相同不用管，直接新装一个）；![01.png](../../../images/Debugger/Ozone/01.png)
@@ -32,9 +32,14 @@
    请在console中输入下面的命令然后回车即可：
 
    ```js
-   Project.SetOSPlugin(“plugin_name”)
+   Project.SetOSPlugin("plugin_name")
    # plugin_name是启用的实时系统支持插件名
    # 我们要使用的命令是Project.SetOSPlugin ("FreeRTOSPlugin_CM4")
    ```
 
    :::
+
+## 其它注意事项
+
+1. 使用J-Link进行Ozone调试时，不要将J-Link连接到电脑上的**雷电USB口/USB3.0口**，否则无法开启调试。![07.png](../../../images/Debugger/Ozone/07.png)
+2. 有待补充
