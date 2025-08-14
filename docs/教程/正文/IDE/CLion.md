@@ -78,6 +78,14 @@
 无论是选择VSCode还是CLion，其内置的调试工具都无法实现STM32CubeIDE中强大的Live Expressions（现场表达式）功能，需要借助其他软件（例如Ozone、Serial Port等）。不过另一种比较折中的方式是，你可以在第三方IDE中进行代码的编写，而仅在STM32CubeIDE中进行调试，相关配置方法请见[这一节](/教程/正文/IDE/CLion#仅使用stm32cubeide进行调试的配置)。
 :::
 
+## 如果要使用J-Link
+
+> 下载J-Link驱动程序包：[官网下载](https://www.segger.com/downloads/jlink/)
+
+运行配置请保持默认的**CMake应用程序**，调试服务器需要以下额外配置：“可执行文件”选择J-Link驱动程序包中的`JLinkGDBServerCL.exe`，**务必取消勾选“持久会话”！**
+
+![39.jpg](../../../images/IDE/CLion/39.jpg)![40.jpg](../../../images/IDE/CLion/40.jpg)
+
 ## CMakeLists.txt配置
 
 > CMake 是一个跨平台构建系统生成工具。它并不是编译器本身，而是用来生成平台相关的构建脚本（如 Makefile、Ninja、MSBuild 等）的工具。借助CMake，我们可以很好地管理构建、模块化管理、引用头文件等。
@@ -94,7 +102,7 @@
 ## 导入STM32CubeIDE工程
 
 1. 在工程文件夹中双击`.ioc`文件，用STM32CubeMX打开；![30.png](../../../images/IDE/CLion/30.png)
-2. 将工具链修改为`CMake`后，直接点击生成，之后就可以用CLion打开了！
+2. 将工具链修改为`CMake`后，直接点击生成，之后就可以用CLion打开了（用CLion打开文件夹）！
 
 ## 仅使用STM32CubeIDE进行调试的配置
 
