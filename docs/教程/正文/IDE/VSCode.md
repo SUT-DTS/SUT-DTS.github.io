@@ -1,5 +1,7 @@
 # VSCode+STM32CubeMX
 >
+> 2025/8/19更新：此处记录及Release中打包的VSCode配置环境**已过时**，官方已更新最新的一站式安装工具链，请不要继续使用。
+
 > **Why VSCode?**
 >
 > 使用STM32CubeMX + VSCode进行日常开发，相比于使用CubeIDE，你可以得到：
@@ -93,13 +95,15 @@
 3. 安装完成后，启动VSCode，来到左侧【插件】选项卡下，安装如下插件：
 
    ```txt
-   C++
-   CMake Tools
-   Cortex-Debug
+   STM32Cube for Visual Studio Code
    中文（简体）语言包    // 可选安装
    ```
 
-   安装完成后的面板：![12.png](../../../images/IDE/VSCode/12.png)
+   注意，你在安装`STM32Cube for Visual Studio Code`时，需要点击旁边的下拉菜单，选择“安装预发布版本”，这样，才能安装最新版STM32插件捆绑的**一大堆**扩展插件；![011.png](../../../images/IDE/VSCode/011.png)
+
+::: details 如果你已经安装了VSCode，甚至用它进行其他技术栈的开发
+可以在左下角设置处新建配置文件，防止插件之间相互干扰！![012.png](../../../images/IDE/VSCode/012.png)
+:::
 
 ## 工程生成的配置
 
