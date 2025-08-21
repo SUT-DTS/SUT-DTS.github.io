@@ -141,6 +141,25 @@ export default withPwa(
           includeAllowlist: true,
         },
       },
+      head: [
+        [
+          'link',
+          { rel: 'preconnect', href: 'https://fonts.googleapis.com' }
+        ],
+        [
+          'link',
+          { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }
+        ],
+        [
+          'link',
+          { href: 'https://fonts.googleapis.com/css2?family=Roboto&display=swap', rel: 'stylesheet' }
+        ]
+      ],
+      transformHead: () => [
+        ['meta', { 'http-equiv': 'Cache-Control', content: 'no-cache, no-store, must-revalidate' }],
+        ['meta', { 'http-equiv': 'Pragma', content: 'no-cache' }],
+        ['meta', { 'http-equiv': 'Expires', content: '0' }],
+      ],
     }),
   ),
 );
