@@ -55,9 +55,12 @@
 6. <Badge type="warning" text="可选步骤" />转到**编辑器→检查**选项卡下，导入配置[CodeCheck.xml](https://github.com/SUT-DTS/SUT-DTS.github.io/blob/db7044fd90bd89034067e8a7a245372294fb69b9/CLion_dev_env/CodeCheck.xml)（可在本Github仓库中找到，或直接[点击下载](https://github.com/SUT-DTS/SUT-DTS.github.io/releases/download/Ver.CH1.10-B/CLion_dev_env.zip)）；![19.png](../../../images/IDE/CLion/19.png)
 7. <Badge type="warning" text="可选步骤" />转到**编辑器→代码样式→C\C++** 选项卡下，导入配置[CodeFormat.xml](https://github.com/SUT-DTS/SUT-DTS.github.io/blob/db7044fd90bd89034067e8a7a245372294fb69b9/CLion_dev_env/CodeFormat.xml)（同样可在Github仓库中找到，或直接[点击下载](https://github.com/SUT-DTS/SUT-DTS.github.io/releases/download/Ver.CH1.10-B/CLion_dev_env.zip)）；![20.png](../../../images/IDE/CLion/20.png)
 8. CLion内置GDB服务，并支持直接使用**JLink**或**STLink**进行烧录，不过我们需要来到【设置】中，根据下图所示的位置，手动将其开启；![08.png](../../../images/IDE/CLion/08.png)
-::: tip
-同时，推荐在如下位置，开启【启用RTOS集成】，并在配置FreeROTS时开启相关设置，即可解锁更高级的FreeRTOS专用调试，可以更方便地查看每个线程的运行状态等信息；![09.png](../../../images/IDE/CLion/09.png)![10.png](../../../images/IDE/CLion/10.png)![11.png](../../../images/IDE/CLion/11.png)
-:::
+   ::: warning
+   在最新版CLion中，此选项文本已改为“为所有项目启用调试服务器”，同样需要勾选上。
+   :::
+   ::: tip
+   同时，推荐在如下位置，开启【启用RTOS集成】，并在配置FreeROTS时开启相关设置，即可解锁更高级的FreeRTOS专用调试，可以更方便地查看每个线程的运行状态等信息；![09.png](../../../images/IDE/CLion/09.png)![10.png](../../../images/IDE/CLion/10.png)![11.png](../../../images/IDE/CLion/11.png)
+   :::
 9. 在上方菜单栏处，展开调试服务器选择，并【编辑调试服务器】；![12.png](../../../images/IDE/CLion/12.png)
 10. 点击添加配置，可以看到CLion已经为我们准备好JLink或STLink下载器的相关配置文件，我们直接点选STLink后，右侧的一切保持默认，【确定】即可；![13.png](../../../images/IDE/CLion/13.png)
 ::: warning
