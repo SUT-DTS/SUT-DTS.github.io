@@ -44,6 +44,10 @@ jobs:
       - name: Build with VitePress
         run: yarn docs:build
 
+      - name: Add build timestamp to index.html
+        run: |
+          echo "<!-- Build Time: $(date +%s) -->" >> docs/.vitepress/dist/index.html
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
