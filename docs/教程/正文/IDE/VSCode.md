@@ -36,7 +36,7 @@
 
 > STM32CubeCLT是一套由ST公司**为用户打包好的一整套嵌入式编程工具链**，包括CMake、Ninja、Arm-GCC和STLink等，方便了统一管理与用户调用。
 
-1. 点击此处进入官网，下载安装的步骤几乎都与[STM32CubeMX的教程](/教程/正文/IDE/VSCode#stm32cubemx)相同~
+1. [点击此处](https://www.st.com.cn/zh/development-tools/stm32cubeclt.html)进入官网，下载安装的步骤几乎都与[STM32CubeMX的教程](/教程/正文/IDE/VSCode#stm32cubemx)相同~
 2. 安装完成后，可以使用命令行检查工具链是否正确安装；
 
 ::: details 如何做？
