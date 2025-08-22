@@ -119,7 +119,7 @@
    STM32CubeMX的芯片选型，基础配置与[STM32CubeIDE](/教程/正文/IDE/STM32CubeIDE#项目基本配置)完全一致哦！
    :::
 
-2. 将本Github仓库下的文件夹[`VSCode_dev_env`(点击下载)](https://github.com/SUT-DTS/SUT-DTS.github.io/releases/download/Ver.CH1.10-B/VSCode_dev_env.zip)中的所有文件复制进你的工程内；![14.png](../../../images/IDE/VSCode/14.png)
+2. 将本Github仓库下的文件夹`VSCode_dev_env`(现已不再提供)中的所有文件复制进你的工程内；![14.png](../../../images/IDE/VSCode/14.png)
 3. 复制完后，在工程文件夹空白区域内**右键**，选择【通过Code打开】；![15.png](../../../images/IDE/VSCode/15.png)
 4. 首次打开VSCode时，上方会弹出配置预设的选择，请选择【Debug】；![16.png](../../../images/IDE/VSCode/16.png)
 ::: tip
