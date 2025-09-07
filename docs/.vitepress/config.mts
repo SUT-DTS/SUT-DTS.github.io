@@ -38,6 +38,10 @@ export default withPwa(
               collapsed: false,
               items: [
                 {
+                  text: "Keil uVision",
+                  link: "/教程/正文/IDE/Keil.md",
+                },
+                {
                   text: "STM32CubeIDE",
                   link: "/教程/正文/IDE/STM32CubeIDE.md",
                 },

@@ -1,4 +1,4 @@
-# 关于 <Badge type="tip" text="Ver.CH1.25-C" />
+# 关于 <Badge type="tip" text="Ver.CH1.30-A" />
 
 ## STM32GuideBook
 
