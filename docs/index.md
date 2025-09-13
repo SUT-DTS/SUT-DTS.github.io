@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: TAP HERE TO START
-      link: /教程/正文/f8q4ef73wc2w
+      link: /教程/正文/BeforeStart
 
 features:
   - title: 新人友好
