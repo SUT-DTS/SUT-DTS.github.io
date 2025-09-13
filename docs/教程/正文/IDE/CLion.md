@@ -9,6 +9,7 @@
 > 3. 软件使用过程中几乎不会出现任何恶性BUG；
 > 4. 对FreeRTOS更加高级的调试支持；
 > 5. 更强大的AI自动补全代码功能，以及可自定义的代码格式化；
+> 6. 使用CMake构建工程，可以与VSCode互通工程；
 >
 > 但与此同时...你将会：
 >
@@ -23,17 +24,22 @@
 
 ### CLion
 
-1. [点击此处](https://www.jetbrains.com.cn/clion/)进入CLion官网，下载并安装CLion，在安装过程中，在此界面请将【更新PATH变量】、【更新上下文菜单】复选框都勾选，其余可参考自身需求；![00.png](../../../images/IDE/CLion/00.png)
-2. 如果是第一次打开CLion，在完成语言和区域设置后，应该首先会弹出一个授权窗口，如下图所示。请选择【非商业使用】，并【登录以进行非商业使用】（或者注册）；![01.png](../../../images/IDE/CLion/01.png)
-3. 在浏览器中完成账号登录后，就可以开始进行免费的非商业使用啦；![02.png](../../../images/IDE/CLion/02.png)
+1. [点击此处](https://apps.microsoft.com/detail/XPFPPN5PLH3BFV?hl=zh-Hans-CN&gl=CN&ocid=pdpshare)在微软商店内安装JetBrains Toolbox,它可以为我们更好地管理CLion软件的安装与更新；![00.png](../../../images/IDE/CLion/00.png)
+2. 在开始菜单中找到JetBrains Toolbox并打开它，随后它就会出现在你的任务栏右下角，单击其图标打开界面；![001.png](../../../images/IDE/CLion/001.png)
+3. 同意使用协议后，首先请点击右上角【设置】，登录你的JetBrains账号；![002.png](../../../images/IDE/CLion/002.png)
+4. 登录完成后，在下方即可找到CLion，点击安装即可；![003.png](../../../images/IDE/CLion/003.png)
+5. 安装完成后即可立刻启动CLion！如果是第一次打开CLion，在完成语言和区域设置后，应该会直接登好账号，选择【开始非商业使用】；![02.png](../../../images/IDE/CLion/02.png)
+   ::: warning
+   如果你没有在JetBrains Toolbox内登录或注册账号，此处会要求你登录或注册一个！
+   :::
 
 ## 工程生成的配置
 
 1. 欢迎来到CLion！首先让我们点击新建工程吧；![03.png](../../../images/IDE/CLion/03.png)
 2. 在左侧的列表中找到STM32CubeMX，来到此界面，点击【启动STM32CubeMX】；![04.png](../../../images/IDE/CLion/04.png)
-::: warning
-如果你的STM32CubeMX和STM32CubeCLT没有安装在默认位置，那么你可能需要点击【编辑...】，并手动定位STM32CubeMX和STM32CubeCLT。
-:::
+   ::: warning
+   如果你的STM32CubeMX和STM32CubeCLT没有安装在默认位置，那么你可能需要点击【编辑...】，并手动定位STM32CubeMX和STM32CubeCLT。
+   :::
 3. 在STM32CubeMX中，像往常一样完成项目配置，最后在Project Manager中，检查以下项目，完成后即可点击右上角【GENERATE CODE】生成代码；![05.png](../../../images/IDE/CLion/05.png)
 4. 将刚才复制的路径粘贴到CLion新建工程窗口的【位置】一栏中，点击【继续】完成工程创建；![06.png](../../../images/IDE/CLion/06.png)
 5. 将会自动弹出【打开项目向导】窗口，首先推荐勾选CMake自动重载以避免每次手动重载，将预设修改为`Debug - Debug预设`；![07.png](../../../images/IDE/CLion/07.png)
