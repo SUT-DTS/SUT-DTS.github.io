@@ -1,4 +1,6 @@
-# 关于 <Badge type="tip" text="Ver.CH1.30-B" />
+# 关于 <Badge type="tip" text="Ver.CH1.30-C" />
+
+> 如果您看见此处显示的版本号不是最新的，请回到主页点击一次`TAP HERE TO START`按钮来刷新缓存。
 
 ## STM32GuideBook
 
