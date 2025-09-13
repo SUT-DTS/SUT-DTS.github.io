@@ -17,7 +17,7 @@ export default withPwa(
       lang: "zh-CN",
       base: "/",
       cleanUrls: true,
-      metaChunk: true,
+      metaChunk: false,
       lastUpdated: false,
       themeConfig: {
         nav: [
