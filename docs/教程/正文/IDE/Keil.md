@@ -2,6 +2,8 @@
 
 ::: danger 注意注意！
 由于战队现已改用CLion作为队内统一IDE，本节现已不再更新/维护。请转到[CLion+STM32CubeMX](/教程/正文/IDE/CLion.md)
+
+如果你是正在接受培训的新同学，请忽略此警告并在学习过程中使用`Keil uVision`
 :::
 
 > **Why Keil uVision?**
@@ -28,7 +30,7 @@
 > 
 > 好在，你现在可以通过两种方式来免费激活Keil，两种方式在激活完成后没有任何使用上的区别。**请在以下两种方式中任选一种方法激活你的Keil。**
 
-### 激活 Arm Keil MDK-Community Edition
+### 激活 Arm Keil MDK-Community Edition（推荐）
 
 > 原文链接：https://www.keil.arm.com/mdk-community/
 
@@ -75,13 +77,13 @@
 > 如果你发现你导入的例程出现了莫名其妙的报错，不妨试试本节教程将默认编译器改为 ARM Compiler Version 5！
 
 1. 首先我们需要确定你的Keil的安装位置，右键快捷方式，点击【打开文件所在的位置】；![29.png](../../../images/IDE/Keil/29.png)
-2. 接着，切换到上一级文件夹`Keil_v5`的另一级文件夹`ARM`下，在这里新建一个文件夹，命名为`ARM`,点进去，复制此时的文件夹路径；![30.png](../../../images/IDE/Keil/30.png)![31.png](../../../images/IDE/Keil/31.png)
+2. 接着，切换到上一级文件夹`Keil_v5`的另一级文件夹`ARM`下，在这里新建一个文件夹，命名为`ARMCC`,点进去，复制此时的文件夹路径；![30.png](../../../images/IDE/Keil/30.png)![31.png](../../../images/IDE/Keil/31.png)
 3. [点击这里](https://wwab.lanzouw.com/iu4IM35mxg6b)下载 ARM Compiler Version 5 安装包，将其解压；
 4. 双击`setup.exe`启动安装程序；![28.png](../../../images/IDE/Keil/28.png)
 5. 一路确认直到进行到此步骤，点击【Browse...】；![32.png](../../../images/IDE/Keil/32.png)
 6. 在【Folder Name】中粘贴你刚刚复制的路径，点击【OK】，回到上一个界面后，点击【Next】，并确认开始安装；![33.png](../../../images/IDE/Keil/33.png)
 ::: warning
-此处图中输入的路径有误，正确的应为`C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARM`。
+此处图中输入的路径有误，正确的应为`C:\Users\ASUS\AppData\Local\Keil_v5\ARM\ARMCC`。
 
 本提示仅纠正图片中的勘误，实际操作中你的路径可能会与之不同，**请勿直接复制上方路径填入**！
 :::
