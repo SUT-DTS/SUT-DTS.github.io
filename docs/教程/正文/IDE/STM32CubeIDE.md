@@ -1,11 +1,5 @@
 # STM32CubeIDE
 
-::: danger 注意注意！
-最近，ST 发布了`STM32CubeIDE 2.0.0`版本，该版本在新建工程的结构上发生了巨大的改动，且移除了内置的`STM32CubeMX`，导致整体操作逻辑发生了很大的变化。截至`2025/11/30`，中文互联网上还没有针对新版本的使用教程。
-
-同学们若没有特殊需求的话，就请在成熟教程出现之前尽量选择`1.19.0`版本下载使用吧，不过如果你想自己研究也不是不行...
-:::
-
 > **Why STM32CubeIDE?**
 >
 > STM32CubeIDE是一体式多操作系统开发工具，是STM32Cube软件生态系统的一部分。STM32CubeIDE集成了STM32CubeMX的STM32配置与项目创建功能，以便提供一体化工具体验，并节省安装与开发时间。(≧∇≦)ﾉ
@@ -14,7 +8,7 @@
 
 1. 点击[这里](https://www.st.com.cn/zh/development-tools/stm32cubeide.html)进入官网,并点击【获取软件】；![00.png](../../../images/IDE/STM32CubeIDE/A1/00.png)
 2. 点击对应系统（Linux/Windows）的【获取最新版本】，并【接受】许可协议；![01.png](../../../images/IDE/STM32CubeIDE/A1/01.png)
-3. 若弹出此窗口，则【创建MyST账户】，**记住创建好的账户备用**；![02.png](../../../images/IDE/STM32CubeIDE/A1/02.png)
+3. 若弹出此窗口，则【创建MyST账户】；![02.png](../../../images/IDE/STM32CubeIDE/A1/02.png)
 ::: danger
 **输入信息时，务必填写正确的电子邮箱以接收验证码！不要跳过此步骤！**  
 如果已有账号的话，就直接登录吧！
@@ -26,6 +20,10 @@
 5. （若官网下载则先解压出软件安装包）双击.exe文件以开始软件安装，安装包必须放在在全英文路径下；
 6. 一路【Accept】和【Next】，安装选项保持默认即可，安装路径**建议不选C盘**；![04.png](../../../images/IDE/STM32CubeIDE/A1/04.png)
 7. 【Finish】！安装完成啦~![05.png](../../../images/IDE/STM32CubeIDE/A1/05.png)
+
+::: danger 注意注意！
+最近，ST 发布了`STM32CubeIDE 2.0.0`版本，该版本在新建工程的结构上发生了巨大的改动，且移除了内置的`STM32CubeMX`，导致我们还需要额外再安装STM32CubeMX，请参考[这里](/教程/正文/IDE/VSCode.md#stm32cubemx)。
+:::
 
 ## “包”安装-创建你的第一个工程
 >
@@ -40,32 +38,25 @@
    工作空间：存放你的项目（代码，项目配置文件，编译文件等的集合）的文件夹，即你想把工程存储的地方。
    :::
    ![02.png](../../../images/IDE/STM32CubeIDE/A2/02.png)
-3. 根据下图说明，打开登录ST账号的窗口，随后在弹出的窗口中登录你刚刚在ST官网注册的MyST账号，若窗口关闭且未出现任何报错，则代表成功登录；![03.png](../../../images/IDE/STM32CubeIDE/A2/03.png)
-   ::: warning
-   **请勿跳过此步骤！**
-   :::
-4. 新建一个工程（一个完整的单片机程序外加配置文件等等...）；![04.png](../../../images/IDE/STM32CubeIDE/A2/04.png)
-5. 输入单片机型号，若是dji-C板则输入STM32F407IGH6；![05.png](../../../images/IDE/STM32CubeIDE/A2/05.png)
-6. 为工程命名，确认无误后【Finish】,第三个一定要选择STM32Cube，若无法选中则退出软件重进；![06.png](../../../images/IDE/STM32CubeIDE/A2/06.png)
-   ::: tip
-   无需点击【下一步】
-   :::
-7. 修改软件包(Pack)存储路径：
-   ::: tip
-   接下来你需要下载的软件包将默认保存在C盘，但我们可以修改软件的安装路径，若不想修改可跳过本段；
-   :::
-    1. 完成工程创建后，IDE会自动打开CubeMX（代码生成器）界面，单击选项卡上的“×”暂时将其关闭；**请勿跳过此步骤！**![07.png](../../../images/IDE/STM32CubeIDE/A2/07.png)
-    2. 依次点击Window→Preference；![08.png](../../../images/IDE/STM32CubeIDE/A2/08.png)
-    3. 依次点击，在【Repository Setup】中，填写或浏览你想要存放软件包的文件夹,建议放在STM32CubeIDE的安装路径下以便于管理；![09.png](../../../images/IDE/STM32CubeIDE/A2/09.png)
-8. 在左侧的【项目资源管理器】中，双击与你刚刚创建的工程同名的.ioc文件，打开CubeMX界面；![010.png](../../../images/IDE/STM32CubeIDE/A2/010.png)
-9. 点击Software Packs→Manage Software Packs，进入“包下载”页面；![011.png](../../../images/IDE/STM32CubeIDE/A2/011.png)
-10. 确认芯片型号（dji-c板是f407,是f4系列），并安装最新版软件包（未来若使用其他系列芯片如f1，h7系列等也如此操作）；![012.png](../../../images/IDE/STM32CubeIDE/A2/012.png)
-11. 等待下载完成即可，遇到确认协议等直接Agree继续；![013.png](../../../images/IDE/STM32CubeIDE/A2/013.png)
-    ::: tip
-    复选框变为绿色即为安装成功；
+3. 启动`STM32CubeMX`，点击如图所示按钮以新建工程；![01.png](../../../images/IDE/STM32CubeIDE/200/01.png)
+4. 在弹出的窗口中，选择你想要创建的工程的芯片型号，若是dji-C板则输入`STM32F407IGH6`，完成后点击右上角的【Start Project】蓝色按钮，即可完成工程创建；![02.png](../../../images/IDE/STM32CubeIDE/200/02.png)
+5. 接下来即可开始配置项目，基本配置方法请参照[【项目基本配置】](/教程/正文/IDE/STM32CubeIDE.md#项目基本配置)一节，现在视为你已经完成项目配置，也可以暂时跳过配置，继续教程；
+6. 点击【Software Packs】→【Manage Software Packs】，进入“包下载”页面；![011.png](../../../images/IDE/STM32CubeIDE/A2/011.png)
+7. 确认芯片型号（dji-c板是f407,即f4系列），并安装最新版软件包（未来若使用其他系列芯片如f1，h7系列等也如此操作）；![012.png](../../../images/IDE/STM32CubeIDE/A2/012.png)
+8. 等待下载完成即可，遇到确认协议等直接Agree继续，复选框变为绿色即为安装成功；![013.png](../../../images/IDE/STM32CubeIDE/A2/013.png)
+9. 切换到【Project Manager】选项卡下，设置工程名、保存路径，注意【Toolchain/IDE】请务必选中【STM32CubeIDE】，确认无误后即可生成代码；![03.png](../../../images/IDE/STM32CubeIDE/200/03.png)
+10. 第一次创建工程需要等待较长时间，弹出此窗口即代表创建完成，此时可以点击【Open Project】，让CubeIDE自动导入你创建的工程；![04.png](../../../images/IDE/STM32CubeIDE/200/04.png)
+11. 如果CubeIDE尚未启动，将会自动启动，出现此窗口即代表导入成功，你可以在【项目资源管理器】中看见它，至此我们成功创建了第一个工程并生成了基础代码；![05.png](../../../images/IDE/STM32CubeIDE/200/05.png)
+
+    ::: details 如果你并没有点击【Open Project】，或者导入失败了...
+
+    **手动导入CubeMX工程**
+
+    - 点击导航栏左上角的【File】→【STM32 Project Create/Import】；![06.png](../../../images/IDE/STM32CubeIDE/200/06.png)
+    - 在打开的向导窗口中，选择图示选项，并【下一步】；![07.png](../../../images/IDE/STM32CubeIDE/200/07.png)
+    - 在导入项目向导中，【导入源】选择【目录】，并进入你刚刚创建的**工程**的那个文件夹，而不是存放工程的文件夹。需要注意的是，请确保你的文件夹名为你刚刚创建的工程名，且文件夹内仅有示例图中所示的几个文件夹；![08.png](../../../images/IDE/STM32CubeIDE/200/08.png)![09.png](../../../images/IDE/STM32CubeIDE/200/09.png)
+    - 之后，将文件夹全部选中（一般会默认全选）后，【完成】导入；![10.png](../../../images/IDE/STM32CubeIDE/200/10.png)
     :::
-12. 安装完回到CubeMX页面，按下**Ctrl+S**即可保存并生成代码，若遇到下面两个提示，此时请按照下图说明，勾选复选框并Yes；![014.png](../../../images/IDE/STM32CubeIDE/A2/014.png)![015.png](../../../images/IDE/STM32CubeIDE/A2/015.png)
-13. 至此我们成功创建了第一个工程并生成了基础代码；![016.png](../../../images/IDE/STM32CubeIDE/A2/016.png)
 
 ## 软件汉化
 >
@@ -96,9 +87,12 @@ https://download.eclipse.org/technology/babel/update-site/latest/
 >
 > 这是开启任何项目前的“起手式”哦，请务必牢记～**以后的所有配置教程及代码教程都将默认你已无误完成本小节的基本配置！**╰(\*°▽°\*)╯
 
-1. 双击.ioc文件进入CubeMX界面，按照下图所示方法，在【System Core】中设置高速外部时钟源为晶振，设置Debug为Serial Wire；
+1. 双击.ioc文件打开CubeMX界面，按照下图所示方法，在【System Core】中设置高速外部时钟源为晶振，设置Debug为Serial Wire；
    ::: tip
    可不设置低速时钟为晶振。
+   :::
+   ::: tip
+   如果CubeMX已经打开，则无需再双击，直接切换窗口即可。
    :::
    ![00.png](../../../images/IDE/STM32CubeIDE/A4/00.png)
 2. 按照下图所示顺序配置时钟，配完后可与图片对照是否一致；![01.png](../../../images/IDE/STM32CubeIDE/A4/01.png)
@@ -106,7 +100,7 @@ https://download.eclipse.org/technology/babel/update-site/latest/
    若在进行图中第③步时弹出切换时钟源的确认提示，请选择【OK】；![02.png](../../../images/IDE/STM32CubeIDE/A4/02.png)
    :::
 3. 在【Project Manager】→【Code Generator】中，勾选“为每个外设生成单独的.c/.h文件”；![03.png](../../../images/IDE/STM32CubeIDE/A4/03.png)
-4. 最后按下Ctrl+S保存并生成代码~
+4. 最后【GENERATE CODE】生成代码~
 
 ~~现在请开始你的表演~~
 
@@ -133,7 +127,7 @@ CubeIDE中还存在另一种按钮风格，此时对应的按钮如图所示:![0
    :::
 
 5. 将.cfg文件按照如下方式修改：
-   - 修改第6行：`source \[find interface/stlink-dap.cfg]` 为`source \[find interface/cmsis-dap.cfg]`；
+   - 修改第6行：`source [find interface/stlink-dap.cfg]` 为`source [find interface/cmsis-dap.cfg]`；
    - 修改第11行：`transport select "dapdirect_swd"` 为 `transport select "swd"`；
    - 修改第28行：`reset_config srst_only srst_nogate connect_assert_srst` 为 `reset_config none`；
 
