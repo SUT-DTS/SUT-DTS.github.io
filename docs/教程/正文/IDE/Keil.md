@@ -1,9 +1,9 @@
 # Keil uVision
 
 ::: danger 注意注意！
-由于战队现已改用CLion作为队内统一IDE，本节现已不再更新/维护。请转到[CLion+STM32CubeMX](/教程/正文/IDE/CLion.md)
+由于现代DIE的快速发展，Keil作为界面原始、工程闭源的“上古IDE”已不被我们推荐。
 
-如果你是正在接受培训的新同学，请忽略此警告并在学习过程中使用`Keil uVision`
+但如果你是正在接受培训的新同学，请忽略此警告并在学习过程中使用`Keil uVision`
 :::
 
 > **Why Keil uVision?**
@@ -35,7 +35,7 @@
 > 原文链接：https://www.keil.arm.com/mdk-community/
 
 1. 此方法无需使用管理员身份运行Keil，直接双击打开即可，打开后，依次点击左上角的【File】→【Liscense Management】，并在弹出的窗口中切到【User-Based License】；![11.png](../../../images/IDE/Keil/11.png)![12.png](../../../images/IDE/Keil/12.png)
-2. 点击下方的【Activate / Deactive...】按钮后，将打开【Arm License Management Utility】，如下图所示；![13.png](../../../images/IDE/Keil/13.png)
+2. 点击下方的【Activate / Deactivate...】按钮后，将打开【Arm License Management Utility】，如下图所示；![13.png](../../../images/IDE/Keil/13.png)
 3. 在右上角，点击选择【License Server...】，随后，在输入框内填入`https://mdk-preview.keil.arm.com`后，点击【Query】，之后在出现的下拉菜单中选择【Keil MDK Community...】然后点击右侧的【Activate（激活）】；![14.png](../../../images/IDE/Keil/14.png)
 4. 至此，Keil已完成激活，接下来可以关闭所有窗口，返回Keil了！![15.png](../../../images/IDE/Keil/15.png)
 

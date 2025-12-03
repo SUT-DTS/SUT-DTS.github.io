@@ -26,7 +26,7 @@
 :::
 
 ## “包”安装-创建你的第一个工程
->
+
 > 包，也就是Pack，是用于对某个系列芯片的代码生成、编译的重要文件，接下来通过创建第一个工程来顺便安装Pack。(o゜▽゜)o☆
 
 1. 双击桌面图标以启动软件；![00.png](../../../images/IDE/STM32CubeIDE/A2/00.png)
@@ -59,7 +59,7 @@
     :::
 
 ## 软件汉化
->
+
 > 虽然道理我都懂，但英文界面看着总是不太习惯呢...(っ °Д °;)っ
 
 1. 根据下图依次点击，进入“软件安装”界面；![00.png](../../../images/IDE/STM32CubeIDE/A3/00.png)
@@ -84,7 +84,7 @@ https://download.eclipse.org/technology/babel/update-site/latest/
 > ~~这下舒服多了\(0^◇^0)/~~
 
 ## 项目基本配置
->
+
 > 这是开启任何项目前的“起手式”哦，请务必牢记～**以后的所有配置教程及代码教程都将默认你已无误完成本小节的基本配置！**╰(\*°▽°\*)╯
 
 1. 双击.ioc文件打开CubeMX界面，按照下图所示方法，在【System Core】中设置高速外部时钟源为晶振，设置Debug为Serial Wire；
@@ -105,7 +105,7 @@ https://download.eclipse.org/technology/babel/update-site/latest/
 ~~现在请开始你的表演~~
 
 ## 使用DAP-Link下载、调试程序到单片机
->
+
 > 是没见过的下载器呢...ヾ(•ω•`)o
 
 1. 先点击页面左上角的小锤子对当前代码进行编译，无报错即可进行下一步；![00.png](../../../images/IDE/STM32CubeIDE/A5/00.png)

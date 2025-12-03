@@ -1,9 +1,5 @@
 # VSCode+STM32CubeMX
 
-::: danger 注意注意！
-由于战队现已改用CLion作为队内统一IDE，本节现已不再更新/维护。请转到[CLion+STM32CubeMX](/教程/正文/IDE/CLion.md)
-:::
-
 ::: danger 2025/8/19更新
 此处记录的VSCode配置环境**已过时**，官方已更新最新的一站式安装工具链，Release中打包的环境配置已经删除，请不要继续使用。
 :::

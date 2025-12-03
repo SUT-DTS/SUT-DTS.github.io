@@ -47,5 +47,5 @@
 ## 其它注意事项
 
 1. 使用J-Link进行Ozone调试时，不要将J-Link连接到电脑上的**雷电USB口/USB3.0口**，否则无法开启调试。![07.png](../../../images/Debugger/Ozone/07.png)
-2. 使用DAP-Link进行Ozone调试时，不要在程序暂停的时候点击结束调试，否则将引发Ozone崩溃（J-Link不会）；
+2. 使用DAP-Link进行Ozone调试时，不要在程序暂停的时候点击结束调试，否则将引发Ozone崩溃（J-Link不会，仅限V3.24）；
 3. 有待补充...

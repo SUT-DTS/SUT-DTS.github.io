@@ -18,7 +18,7 @@
 
 ## 工具链与软件安装
 
-### STM32CubeMX、STM32CubeCLT以及OpneOCD
+### STM32CubeMX、STM32CubeCLT以及OpenOCD
 
 参照[VSCode+STM32CubeMX部分教程](/教程/正文/IDE/VSCode.md)。
 
@@ -79,7 +79,7 @@
 3. 进行如图所示的配置，修改途中两个红框所示的选项至图中所示，其中【面板配置文件】需要选择你刚刚复制进来的`.cfg`文件，或直接粘贴绝对路径，最后【确定】；![23.png](../../../images/IDE/CLion/23.png)
 4. 在使用DAP-Link时，需要将【调试服务器】改回【原生】，之后你就可以正常使用右侧的老三样按钮了！同样的，如果需要使用STLink，则再将【调试服务器】改回【STLink】的同时，也别忘了将【运行/调试配置】改回默认！![24.png](../../../images/IDE/CLion/24.png)
 ::: warning
-无论是选择VSCode还是CLion，其内置的调试工具都无法实现STM32CubeIDE中强大的Live Expressions（现场表达式）功能，需要借助其他软件（例如Ozone、Serial Port等）。不过另一种比较折中的方式是，你可以在第三方IDE中进行代码的编写，而仅在STM32CubeIDE中进行调试，相关配置方法请见[这一节](/教程/正文/IDE/CLion#仅使用stm32cubeide进行调试的配置)。
+无论是选择VSCode还是CLion，其内置的调试工具都无法实现STM32CubeIDE中强大的Live Expressions（现场表达式）功能，需要借助其他软件（例如RTT Viewer、Ozone、Serial Port等）。不过另一种比较折中的方式是，你可以在第三方IDE中进行代码的编写，而仅在STM32CubeIDE中进行调试，相关配置方法请见[这一节](/教程/正文/IDE/CLion#仅使用stm32cubeide进行调试的配置)。
 :::
 
 ## 如果要使用J-Link
