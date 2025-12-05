@@ -6,6 +6,12 @@
 
 ## 软件安装
 
+::: danger 注意注意！
+最近，ST 发布了`STM32CubeIDE 2.0.0`版本，该版本在新建工程的结构上发生了巨大的改动，且移除了内置的`STM32CubeMX`，导致我们还需要额外再安装`STM32CubeMX`，具体安装方法请参考[这里](/教程/正文/IDE/VSCode.md#stm32cubemx)。
+
+请在完成了**最新版**的`STM32CubeMX`安装后，再进行下一步~
+:::
+
 1. 点击[这里](https://www.st.com.cn/zh/development-tools/stm32cubeide.html)进入官网,并点击【获取软件】；![00.png](../../../images/IDE/STM32CubeIDE/A1/00.png)
 2. 点击对应系统（Linux/Windows）的【获取最新版本】，并【接受】许可协议；![01.png](../../../images/IDE/STM32CubeIDE/A1/01.png)
 3. 若弹出此窗口，则【创建MyST账户】；![02.png](../../../images/IDE/STM32CubeIDE/A1/02.png)
@@ -20,10 +26,6 @@
 5. （若官网下载则先解压出软件安装包）双击.exe文件以开始软件安装，安装包必须放在在全英文路径下；
 6. 一路【Accept】和【Next】，安装选项保持默认即可，安装路径**建议不选C盘**；![04.png](../../../images/IDE/STM32CubeIDE/A1/04.png)
 7. 【Finish】！安装完成啦~![05.png](../../../images/IDE/STM32CubeIDE/A1/05.png)
-
-::: danger 注意注意！
-最近，ST 发布了`STM32CubeIDE 2.0.0`版本，该版本在新建工程的结构上发生了巨大的改动，且移除了内置的`STM32CubeMX`，导致我们还需要额外再安装STM32CubeMX，请参考[这里](/教程/正文/IDE/VSCode.md#stm32cubemx)。
-:::
 
 ## “包”安装-创建你的第一个工程
 
